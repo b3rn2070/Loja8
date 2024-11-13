@@ -17,12 +17,22 @@ if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 1) {
 </head>
 <body>
 <center>
-    <h1>Login</h1>
-    <form action="login.php" method="post">
-        <p><input type="text" placeholder="email" name="email" required></p>
-        <p><input type="password" placeholder="senha" name="senha" required></p>
-        <p><input type="submit" value="login"></p>
-    </form>
+<section class="formulario-container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="form-footer">
+                <button type="submit" class="btn-submit">Enviar</button>
+            </div>
+        </form>
+    </section>
     <h4>Caso não possua cadastro <a href="cadastro.php"> clique aqui </a></h4>
 
     <?php
